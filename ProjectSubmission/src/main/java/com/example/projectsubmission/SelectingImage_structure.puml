@@ -1,0 +1,167 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.example.projectsubmission.SelectingImage",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1516230751 { 
+   	label=projectsubmission
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Controller960968332[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Controller</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   root: Parent [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   scene: Scene [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   stage: Stage [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ clickhere(event: ActionEvent)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+SelectingImage960968332[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)SelectingImage</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   Camera: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   Dimensions: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   Location: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   filenameLabel: Label [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   imageview: ImageView [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   listview: ListView&lt;File&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   selectedFiles: List&lt;File&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ back(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ chooseDesktop(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ displayImageProperties(file: File)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ displayThumbnail(file: File)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ fileSelect(): List&lt;File&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >+ next(event: ActionEvent)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Thirdpage960968332[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Thirdpage</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+   choicebox: ChoiceBox&lt;String&gt; [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >+   items: String[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ back(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ chooseDesktop(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ fileSelect(): List&lt;File&gt;</TD></TR>
+<TR><TD ALIGN="LEFT" >- getItems(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ initialize(url: URL, resourceBundle: ResourceBundle)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ mainmenu(event: ActionEvent)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ otherFormat(event: ActionEvent)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Controller960968332 -> SelectingImage960968332[arrowhead=none, arrowtail=empty, dir=both];
+SelectingImage960968332 -> Thirdpage960968332[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="695.0" prefWidth="1232.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectsubmission.Thirdpage">
+   <children>
+      <ImageView fx:id="imageview" fitHeight="243.0" fitWidth="1.0" layoutX="250.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="250.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport></ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="23.0" prefHeight="53.0" prefWidth="1027.0" text="IMAGE PROCESSING" textAlignment="CENTER" textFill="#563266ba" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="19.0" layoutY="73.0" prefHeight="109.0" prefWidth="1016.0" text="SELECT IMAGE TO CHANGE FORMAT" AnchorPane.bottomAnchor="513.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="filenameLabel" alignment="CENTER" layoutX="193.0" layoutY="390.0" prefHeight="63.0" prefWidth="353.0" text="SELECT IMAGE FORMAT:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+
+      <Label fx:id="Dimensions" layoutX="218.0" layoutY="330.0" prefHeight="34.0" prefWidth="402.0" text="CHOOSE  IMAGE FROM DESKTOP:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="Location" layoutX="608.0" layoutY="251.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="Camera" layoutX="116.0" layoutY="475.0" prefHeight="44.0" prefWidth="436.0" text="SELECT LOCATION WHERE YOU WANT TO SAVE :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Button layoutX="627.0" layoutY="325.0" mnemonicParsing="false" onAction="#chooseDesktop" prefHeight="43.0" prefWidth="286.0" text="SELECT " AnchorPane.leftAnchor="627.0" AnchorPane.rightAnchor="159.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listview" layoutX="625.0" layoutY="253.0" prefHeight="53.0" prefWidth="292.0" />
+      <Button fx:id="otherFormat" layoutX="630.0" layoutY="475.0" mnemonicParsing="false" onAction="#otherFormat" prefHeight="44.0" prefWidth="292.0" text="Convert and Save">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <ChoiceBox fx:id="choicebox" layoutX="627.0" layoutY="400.0" prefHeight="43.0" prefWidth="286.0" />
+      <Button fx:id="back" layoutX="1024.0" layoutY="670.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="70.0" text="BACK" />
+      <Button fx:id="mainmenu" layoutX="1109.0" layoutY="670.0" mnemonicParsing="false" onAction="#mainmenu" prefHeight="25.0" prefWidth="109.0" text="MAIN MENU" />
+      <Label layoutX="205.0" layoutY="250.0" prefHeight="53.0" prefWidth="409.0" text="YOU HAVE SELECTED THIS IMAGE --&gt;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

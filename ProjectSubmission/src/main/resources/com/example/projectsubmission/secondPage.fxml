@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" prefHeight="739.0" prefWidth="1089.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectsubmission.SelectingImage">
+   <children>
+      <ImageView fx:id="imageview" fitHeight="151.0" fitWidth="498.0" layoutX="447.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="447.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport></ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="286.0" prefHeight="76.0" prefWidth="719.0" text="IMAGE PROCESSING" textAlignment="CENTER" textFill="#563266ba" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="84.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="86.0" layoutY="52.0" prefHeight="87.0" prefWidth="1089.0" text="SELECT IMAGE TO CHECK PROPERTIES" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="-86.0" AnchorPane.topAnchor="52.0">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="435.0" layoutY="498.0" mnemonicParsing="false" onAction="#chooseDesktop" prefHeight="46.0" prefWidth="418.0" text="SELECT IMAGE FROM DESKTOP" AnchorPane.leftAnchor="435.0" AnchorPane.rightAnchor="236.0">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="filenameLabel" layoutX="457.0" layoutY="454.0" prefHeight="43.0" prefWidth="515.0" textFill="#133cd0" />
+      <ListView fx:id="listview" blendMode="MULTIPLY" layoutY="187.0" prefHeight="539.0" prefWidth="304.0" />
+      <Label fx:id="Dimensions" layoutX="456.0" layoutY="371.0" prefHeight="43.0" prefWidth="571.0" textFill="#322bbf" />
+      <Label fx:id="Location" layoutX="457.0" layoutY="400.0" prefHeight="43.0" prefWidth="619.0" textFill="#4a39d0" />
+      <Label fx:id="Camera" layoutX="458.0" layoutY="433.0" prefHeight="34.0" prefWidth="424.0" textFill="#4c53d0" />
+      <Button fx:id="next" layoutX="435.0" layoutY="605.0" mnemonicParsing="false" onAction="#next" prefHeight="43.0" prefWidth="431.0" text="CLICK HERE TO CHANGE IMAGE FORMAT" AnchorPane.leftAnchor="435.0" AnchorPane.rightAnchor="236.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="back" layoutX="1021.0" layoutY="706.0" mnemonicParsing="false" onAction="#back" text="BACK" />
+      <ImageView fitHeight="34.0" fitWidth="37.0" layoutX="953.0" layoutY="689.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="5.0" layoutY="150.0" prefHeight="25.0" prefWidth="380.0" text="Click any path below selected from Desktop" textFill="#560883">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
